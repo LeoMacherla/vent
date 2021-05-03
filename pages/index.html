@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <title>Vent</title>
+</head>
+<body>
+        <!-- Titlebar -->
+        <div class='titlebar'>
+            <div class="dragging"></div>
+            <div class="minimise" onclick="minimiseApplication()">&minus;</div>
+            <div class="maximise" onclick="maximiseApplication()">&square;</div>
+            <div class="exit" onclick="exitApplication()">&times;</div>
+        </div>
+
+        <div class="header flex">
+            <h1>Vent</h1>
+            <div>
+                <button onclick="navigatePage('new')"><i class="fas fa-pen-square fa-3x"></i></button>
+                <button onclick="navigatePage('settings')"><i class="fas fa-cogs fa-3x"></i></button>
+            </div>
+
+        </div>
+
+        <main class="main">
+            <ul class="vents-list">
+
+            </ul>
+        </main>
+        <script src="../js/vent.js"></script>
+        <script src="../js/index.js"></script>
+    </body>
+</html>

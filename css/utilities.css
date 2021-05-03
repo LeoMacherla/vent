@@ -1,0 +1,86 @@
+.card {
+    background: var(--lighter-grey);
+    padding: 0.1rem 2rem;
+    box-shadow: 0 3px 5px #000;
+    border-radius: 3.5px;
+}
+
+/* Titlebar */
+.titlebar {
+    width: 100vw;
+    height: 23px;
+    background: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.titlebar .dragging {
+    flex: 1;
+    -webkit-app-region: drag;
+}
+
+.titlebar .exit {
+    padding: 0 10px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.titlebar .minimise {
+    padding: 0 10px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.titlebar .maximise {
+    padding: 0 10px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.titlebar .exit:hover {
+    background: #f54242;
+    color: #000;
+}
+
+.titlebar .minimise:hover, 
+.titlebar .maximise:hover, 
+.titlebar .back:hover, 
+.titlebar .forwards:hover {
+    background: #222;
+}
+
+/* Buttons */
+.btn {
+    padding: 1rem 2.5rem;
+    border-radius: 3.5px;
+    background: var(--lighter-grey);
+    color: #fff;
+    font-weight: bolder;
+}
+
+.btn:hover {
+    background: var(--lilac);
+    color: var(--grey);
+}
+
+/* Text colors */
+.text-777 {
+    color:#777;
+}
+
+/* Flex Container */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}

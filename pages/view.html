@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/view.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <title>Vent</title>
+</head>
+<body>
+        <!-- Titlebar -->
+        <div class='titlebar'>
+            <div class="dragging"></div>
+            <div class="minimise" onclick="minimiseApplication()">&minus;</div>
+            <div class="maximise" onclick="maximiseApplication()">&square;</div>
+            <div class="exit" onclick="exitApplication()">&times;</div>
+        </div>
+
+        <div class="header flex">
+            <div>
+                <h1 id="title"></h1>
+                <p id="date"></p>
+            </div>
+
+            <div>
+                <button onclick="navigatePage('index')"><i class="fas fa-caret-square-left fa-3x"></i></button>
+            </div>
+
+        </div>
+
+        <main class="main">
+            <p id="body"></p>
+        </main>
+        <script src="../js/vent.js"></script>
+        <script src="../js/view.js"></script>
+    </body>
+</html>

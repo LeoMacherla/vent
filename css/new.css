@@ -1,0 +1,16 @@
+.main {
+    padding: 2rem;
+}
+
+.main div {
+    margin-bottom: 2rem;
+}
+
+.main .options div {
+    display: inline-block;
+    margin-right: 3rem;
+}
+
+.main .options .checkboxes {
+    margin-bottom: 0;
+}

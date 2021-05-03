@@ -1,0 +1,40 @@
+{
+  "name": "vent",
+  "version": "0.0.1",
+  "description": "A venting app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^12.0.6"
+  },
+  "devDependencies": {
+    "electron-builder": "^22.10.5",
+    "electron-reload": "^1.5.0"
+  },
+  "build": {
+    "productName": "ChecklistsPro",
+    "win": {
+      "target": "nsis",
+      "icon": "/assets/icons/icon.ico",
+      "publisherName": "The ChecklistsPro Project"
+    },
+    "directories": {
+      "buildResources": "build"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "LeoMacherla",
+        "repo": "checklistsproupdates",
+        "token": "ceeae701993abff8d5548fece44863ebb63a6246"
+      }
+    ]
+  }
+}
