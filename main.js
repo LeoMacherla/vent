@@ -3,9 +3,9 @@ const { BrowserWindow, app, ipcMain } = require('electron')
 const { autoUpdater } = require('electron-updater')
 
 //Electron reload
-require('electron-reload')(__dirname, {
-    ignored: /data|[/\\]\./,
-})
+// require('electron-reload')(__dirname, {
+//     ignored: /data|[/\\]\./,
+// })
 
 //Disable security warnings
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true'
@@ -28,13 +28,13 @@ function createMain() {
     main.loadFile('./pages/index.html')
     main.setMenu(null)
 
-    // main.webContents.toggleDevTools();
+    main.webContents.toggleDevTools()
+
+    main.once('ready-to-show', () => {
+        autoUpdater.checkForUpdatesAndNotify()
+    })
 
     main.webContents.on('did-finish-load', function () {
-
-        //Check for updated
-        autoUpdater.checkForUpdatesAndNotify()
-
         //Show main window once web contents has loaded
         main.show()
 
@@ -69,11 +69,15 @@ app.on('activate', () => {
 
 // Auto Updater
 autoUpdater.on('update-available', () => {
-    main.webContents.send('update-available')
+    main.webContents.send('update_available')
+})
+
+autoUpdater.on('update-not-available', () => {
+    main.webContents.send('update_not_available')
 })
 
 autoUpdater.on('update-downloaded', () => {
-    main.webContents.send('update-downloaded')
+    main.webContents.send('update_downloaded')
 })
 
 ipcMain.on('restart-app', () => {

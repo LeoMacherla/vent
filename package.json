@@ -1,6 +1,6 @@
 {
   "name": "vent",
-  "version": "0.0.5",
+  "version": "1.1.5",
   "description": "A venting app",
   "main": "main.js",
   "scripts": {
@@ -26,7 +26,7 @@
   "build": {
     "productName": "Vent",
     "win": {
-      "target": "zip",
+      "target": "nsis",
       "icon": "/assets/icon.png",
       "publisherName": "Leo Macherla"
     },
@@ -37,8 +37,7 @@
       {
         "provider": "github",
         "owner": "LeoMacherla",
-        "repo": "vent",
-        "token": "ceeae701993abff8d5548fece44863ebb63a6246"
+        "repo": "vent"
       }
     ]
   }

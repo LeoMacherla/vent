@@ -102,10 +102,15 @@ const showAlert = (title, description, update) => {
 }
 
 // Handle auto updater messages
-ipcRenderer.on('update-available', () => {
-    showAlert('An Update Is Available', 'Hey, good news! An update has been detected. It is being downloaded...')
+ipcRenderer.on('update_available', () => {
+    console.log('Update Available')
+    showAlert('An Update Is Available', 'Hey, good news! An update has been detected. It is being downloaded...', false)
 })
 
-ipcRenderer.on('update-downloaded', () => {
-    showAlert('Update Downloaded', 'The update has been successfully downloaded. Click this notificaion to install it.')
+ipcRenderer.on('update_not_available', () => {
+    console.log('Updates not available')
+})
+
+ipcRenderer.on('update_downloaded', () => {
+    showAlert('Update Downloaded', 'The update has been successfully downloaded. Click this notification to install it.', true)
 })
