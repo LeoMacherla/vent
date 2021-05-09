@@ -7,6 +7,8 @@ const entry_locked = document.getElementById('locked');
 
 const save_button = document.getElementById('save');
 
+primaryColour();
+
 setInterval(() => { initDate(); }, 500)
 
 save_button.addEventListener('click', () => {

@@ -1,141 +1,186 @@
 /* Font: Mukta */
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap");
 /* Custom Properties */
 :root {
-    --lilac: #dc6bff;
-    --purple: #cc26ff;
-    --grey: #151515;
-    --lighter-grey: #252525;
-    --lighter-grey-2: #333;
+  --lilac: #dc6bff;
+  --purple: #a02fc3;
+  --grey: #151515;
+  --lighter-grey: #252525;
+  --lighter-grey-2: #333;
 }
 
 /* Resets */
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
-    outline: none;
-    border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
 }
 
 body {
-    margin: 0;
-    font-family: 'Mukta', sans-serif;
-    color: #fff;
-    background: var(--grey);
-    overflow: hidden;
-    transition: opacity ease 0.3s;
-    opacity: 0;
+  margin: 0;
+  font-family: 'Mukta', sans-serif;
+  color: #fff;
+  background: var(--grey);
+  overflow: hidden;
+  -webkit-transition: opacity ease 0.3s;
+  transition: opacity ease 0.3s;
+  opacity: 0;
 }
 
 ul {
-    list-style-type: none;
-    text-decoration: none;
+  list-style-type: none;
+  text-decoration: none;
 }
 
-
 button {
-    background: transparent;
-    color: var(--lighter-grey-2);
-    transition: all ease 0.3s;
-    cursor: pointer;
+  background: transparent;
+  color: #ccc;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  cursor: pointer;
 }
 
 button:hover {
-    color: var(--lilac);
+  color: var(--lilac);
 }
 
 button:active {
-    color: var(--purple);
+  color: var(--purple);
 }
 
-input, 
+input,
 textarea {
-    background: transparent;
-    border-radius: 3.5px;
-    border: solid 2px var(--lighter-grey-2);
-    padding: 1rem;
-    margin-right: 1rem;
-    color: var(--lilac);
-    transition: border ease 0.3s;
+  background: transparent;
+  border-radius: 3.5px;
+  border: solid 2px var(--lighter-grey-2);
+  padding: 1rem;
+  margin-right: 1rem;
+  color: var(--lilac);
+  -webkit-transition: border ease 0.3s;
+  transition: border ease 0.3s;
 }
 
 input:focus,
 textarea:focus {
-    border-color: var(--lilac);
-    color: #fff;
+  border-color: var(--lilac);
+  color: #fff;
+}
+
+input[type='color'],
+textarea[type='color'] {
+  padding: 0px;
+  min-width: 200px;
 }
 
 textarea {
-    margin: 0;
-    width: 100%;
-    min-height: 200px;
-    resize: vertical;
-    font-family: inherit;
+  margin: 0;
+  width: 100%;
+  min-height: 200px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+label {
+  display: block;
 }
 
 ::-webkit-scrollbar {
-    width: 3px;
+  width: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--lilac);
-    border-radius: 3.5px;
+  background-color: var(--lilac);
+  border-radius: 3.5px;
 }
-
 
 /* Header */
 .header {
-    padding: 0 2rem;
-    margin-bottom: 1rem;
-    border-bottom: solid 2px var(--lilac);
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+  border-bottom: solid 2px var(--lilac);
 }
 
 .header p {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 /* Main */
 .main {
-    max-height: 80vh;
-    overflow: auto;
+  max-height: 80vh;
+  overflow: auto;
 }
 
 .main ul.vents-list {
-    margin: 0 1rem;
-    padding: 1rem;
-    height: fit-content;
+  margin: 0 1rem;
+  padding: 1rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .vent {
-    position: relative;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    transition: all ease 0.3s;
-    cursor: pointer;
-    margin: 1rem auto;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  margin: 1rem auto;
 }
 
 .vent:hover {
-    transform: scale(1.02);
-    background: var(--lighter-grey-2);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  background: var(--lighter-grey-2);
 }
 
 .vent h2 {
-    margin: 0.8rem 0 0 0;
+  margin: 0.8rem 0 0 0;
 }
 
 .vent p {
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .vent img {
-    width: 35px;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+  width: 35px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
+
+/* Alert */
+#alert {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  margin: 2em 0;
+  width: 90%;
+  height: 180px;
+  background: var(--lighter-grey-2);
+  border-bottom: solid 3px var(--lilac);
+  z-index: 100;
+  cursor: pointer;
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  overflow: auto;
+}
+
+#alert:hover {
+  background: var(--lighter-grey);
+}
+
+#alert p#alert-description {
+  max-width: 100%;
+  word-wrap: break-word;
+  max-height: 175px;
+}
+/*# sourceMappingURL=main.css.map */

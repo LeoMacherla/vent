@@ -33,8 +33,38 @@
         </div>
 
         <main class="main">
-            <input type="text" id="new-password" name="new-password" placeholder="New Password">
-            <button id="save-new-password" class="btn" onclick="savePassword()">Save</button>
+            <div>
+                <h3>Password</h3>
+                <input type="text" id="new-password" name="new-password" placeholder="New Password">
+            </div>
+            <div>
+                <h3>Primary App Colour</h3>
+                <label for="primary-color" id="primary-color-label"></label>
+                <input type="color" id="primary-color" name="primary-color">
+                <button id="reset-colour" onclick="resetColour()">Reset to default</button>
+            </div>
+            <div>
+                <h3>Censoring</h3>
+                <div class="flex">
+                    <div>
+                        <input type="radio" id="censor-none" name="censor-radio" value="none">
+                        <label for="censor-none">Don't censor</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="censor-asterisk" name="censor-radio" value="asterisk">
+                        <label for="censor-asterisk">Replace with asterisk</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="censor-hover" name="censor-radio" value="hover" checked>
+                        <label for="censor-hover">Display on hover</label>
+                    </div>
+
+                </div>
+
+            </div>
+            <button id="save-settings" class="btn" onclick="saveSettings()">Save Settings</button>
         </main>
 
         <script src="../js/vent.js"></script>

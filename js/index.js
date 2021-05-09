@@ -1,6 +1,7 @@
 const vents_list = document.querySelector('.vents-list');
 
 displayVents();
+primaryColour();
 
 function displayVents() {
     const vents = fs.readdirSync(vents_dir)

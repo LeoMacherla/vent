@@ -1,3 +1,18 @@
 .main {
     padding: 2rem;
 }
+
+.main > div {
+    border-bottom: solid 1px var(--lighter-grey-2);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.main > div h3 {
+    margin-top: 0;
+}
+
+.main #save-settings {
+    display: block;
+    float: right;
+}

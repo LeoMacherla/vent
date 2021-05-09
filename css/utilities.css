@@ -72,6 +72,19 @@
     color: var(--grey);
 }
 
+/* Filter */
+.filter {
+    background: var(--lighter-grey);
+    color: var(--lighter-grey);
+    padding: 0 4px;
+    cursor: pointer;
+    transition: color ease 0.3s;
+}
+
+.filter:hover {
+    color: #fff;
+}
+
 /* Text colors */
 .text-777 {
     color:#777;
